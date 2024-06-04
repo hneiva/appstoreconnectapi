@@ -355,14 +355,14 @@ class Api:
 		"""
 		return self._modify_resource(user, locals())
 
-	def list_users(self, filters=None, sort=None):
+	def list_users(self, filters=None, sort="username"):
 		"""
 		:reference: https://developer.apple.com/documentation/appstoreconnectapi/list_users
 		:return: an iterator over User resources
 		"""
 		return self._get_resources(User, filters, sort)
 
-	def list_invited_users(self, filters=None, sort=None):
+	def list_invited_users(self, filters=None, sort="email"):
 		"""
 		:reference: https://developer.apple.com/documentation/appstoreconnectapi/list_invited_users
 		:return: an iterator over UserInvitation resources
